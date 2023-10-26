@@ -1,0 +1,163 @@
+:root {
+  --card-margin: 1.3rem;
+  --font-family: "Segoe UI", "Segoe UI Midlevel", sans-serif;
+  --widget-title-font-size: 1.6rem;
+  --button-font-size: 0.9rem;
+  --card-height: 12.5rem;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* Styles for the header container */
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  gap: 0.6rem;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 0.6rem;
+}
+
+/* Styles for the recommendations title */
+.widget-title {
+  font-weight: bold;
+  font-size: var(--widget-title-font-size);
+  margin-bottom: 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: flex-end;
+  word-break: break-word;
+}
+
+/* Styles for the "Show different topics" button */
+.show-different-topics-button {
+  border: none;
+  background: none;
+  font-size: var(--button-font-size);
+  cursor: pointer;
+  margin-bottom: 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: flex-end;
+}
+
+/* Container for recommendation cards */
+.cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: flex-start;
+}
+
+/* Styles for each recommendation card */
+.recommendation-card {
+  height: var(--card-height);
+  border: 0.1rem solid #ddd;
+  border-radius: 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  transition: box-shadow 0.3s;
+  overflow: hidden;
+  margin: 0.2rem;
+  width: calc(20% - var(--card-margin));
+}
+
+/* Media queries for responsive design */
+@media (min-width: 62rem) and (max-width: 74.9rem) {
+  .recommendation-card {
+    width: calc(25% - var(--card-margin));
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 61.9rem) {
+  .recommendation-card {
+    width: calc(33.3% - var(--card-margin));
+  }
+}
+
+@media (min-width: 30.1rem) and (max-width: 47.9rem) {
+  .recommendation-card {
+    width: calc(50% - var(--card-margin));
+  }
+}
+
+@media (max-width: 30rem) {
+  .recommendation-card {
+    width: 100%;
+  }
+}
+
+/* Styles for the recommendation image */
+.recommendation-image {
+  width: 100%;
+  height: 8.1rem;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Styles for the recommendation description */
+.recommendation-description {
+  font-weight: bold;
+  padding: 0.3rem 0.3rem 0;
+  max-height: 2.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 3.6em;
+  line-height: 1.3em;
+}
+
+/* Styles for the recommendation branding */
+.recommendation-branding {
+  color: #666;
+  padding: 0.3rem;
+  font-size: small;
+}
+
+/* Reset link styles */
+a,
+a:hover,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Error container styles */
+.error-container {
+  margin-bottom: 0.6rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 0.6rem;
+}
